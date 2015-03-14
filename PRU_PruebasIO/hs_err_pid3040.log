@@ -1,0 +1,196 @@
+#
+# An unexpected error has been detected by HotSpot Virtual Machine:
+#
+#  EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00000001, pid=3040, tid=2808
+#
+# Java VM: Java HotSpot(TM) Client VM (1.5.0_08-b03 mixed mode, sharing)
+# Problematic frame:
+# C  0x00000001
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0b0a1698):  JavaThread "AWT-EventQueue-1" [_thread_in_native, id=2808]
+
+siginfo: ExceptionCode=0xc0000005, reading address 0x00000001
+
+Registers:
+EAX=0x0aef3b68, EBX=0x00a7f078, ECX=0x0b0a06e0, EDX=0x003a0608
+ESP=0x0b58f474, EBP=0x0b58f4a4, ESI=0x0b0a1758, EDI=0x0b0a06e0
+EIP=0x00000001, EFLAGS=0x00010206
+
+Top of Stack: (sp=0x0b58f474)
+0x0b58f474:   6d153caf 00a7f078 000009ad 0b0a1698
+0x0b58f484:   26b2e710 26b2e710 0b097bc8 00000000
+0x0b58f494:   0b58f480 0b58fae4 6d1664bc 00000000
+0x0b58f4a4:   0b58f4d0 00ad832f 000009ad 0b58f4e0
+0x0b58f4b4:   0b58f4b4 00000000 0b58f4e0 26b2f8b8
+0x0b58f4c4:   00000000 26b2e710 0b58f4e0 0b58f50c
+0x0b58f4d4:   00ad2dc0 00000000 00ad6513 23014640
+0x0b58f4e4:   23014110 00000000 23014110 0b58f4e8 
+
+Instructions: (pc=0x00000001)
+0xfffffff1:   
+
+
+Stack: [0x0b550000,0x0b590000),  sp=0x0b58f474,  free space=253k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  0x00000001
+j  sun.awt.windows.WTextComponentPeer.getText()Ljava/lang/String;+0
+j  java.awt.TextComponent.getText()Ljava/lang/String;+14
+j  java.awt.TextArea.appendText(Ljava/lang/String;)V+10
+j  java.awt.TextArea.append(Ljava/lang/String;)V+2
+j  keyStrokes.BotonesColoresApplet.handleEvent(Ljava/awt/Event;)Z+97
+J  java.awt.Component.postEvent(Ljava/awt/Event;)Z
+J  java.awt.Component.postEvent(Ljava/awt/Event;)Z
+J  java.awt.Component.postEvent(Ljava/awt/Event;)Z
+J  java.awt.Component.dispatchEventImpl(Ljava/awt/AWTEvent;)V
+j  java.awt.Component.dispatchEvent(Ljava/awt/AWTEvent;)V+2
+j  java.awt.KeyboardFocusManager.redispatchEvent(Ljava/awt/Component;Ljava/awt/AWTEvent;)V+7
+j  java.awt.DefaultKeyboardFocusManager.typeAheadAssertions(Ljava/awt/Component;Ljava/awt/AWTEvent;)Z+239
+j  java.awt.DefaultKeyboardFocusManager.dispatchEvent(Ljava/awt/AWTEvent;)Z+1079
+J  java.awt.Component.dispatchEventImpl(Ljava/awt/AWTEvent;)V
+J  java.awt.EventQueue.dispatchEvent(Ljava/awt/AWTEvent;)V
+v  ~RuntimeStub::alignment_frame_return Runtime1 stub
+j  java.awt.SequencedEvent.dispatch()V+110
+J  java.awt.EventQueue.dispatchEvent(Ljava/awt/AWTEvent;)V
+J  java.awt.EventDispatchThread.pumpOneEventForHierarchy(ILjava/awt/Component;)Z
+v  ~RuntimeStub::alignment_frame_return Runtime1 stub
+j  java.awt.EventDispatchThread.pumpEventsForHierarchy(ILjava/awt/Conditional;Ljava/awt/Component;)V+26
+j  java.awt.EventDispatchThread.pumpEvents(ILjava/awt/Conditional;)V+4
+j  java.awt.EventDispatchThread.pumpEvents(Ljava/awt/Conditional;)V+3
+j  java.awt.EventDispatchThread.run()V+9
+v  ~StubRoutines::call_stub
+V  [jvm.dll+0x86e84]
+V  [jvm.dll+0xddead]
+V  [jvm.dll+0x86d55]
+V  [jvm.dll+0x86ab2]
+V  [jvm.dll+0xa16b2]
+V  [jvm.dll+0x10f4ac]
+V  [jvm.dll+0x10f47a]
+C  [MSVCRT.dll+0x2a3b0]
+C  [kernel32.dll+0xb683]
+
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+j  sun.awt.windows.WTextComponentPeer.getText()Ljava/lang/String;+0
+j  java.awt.TextComponent.getText()Ljava/lang/String;+14
+j  java.awt.TextArea.appendText(Ljava/lang/String;)V+10
+j  java.awt.TextArea.append(Ljava/lang/String;)V+2
+j  keyStrokes.BotonesColoresApplet.handleEvent(Ljava/awt/Event;)Z+97
+J  java.awt.Component.postEvent(Ljava/awt/Event;)Z
+J  java.awt.Component.postEvent(Ljava/awt/Event;)Z
+J  java.awt.Component.postEvent(Ljava/awt/Event;)Z
+J  java.awt.Component.dispatchEventImpl(Ljava/awt/AWTEvent;)V
+j  java.awt.Component.dispatchEvent(Ljava/awt/AWTEvent;)V+2
+j  java.awt.KeyboardFocusManager.redispatchEvent(Ljava/awt/Component;Ljava/awt/AWTEvent;)V+7
+j  java.awt.DefaultKeyboardFocusManager.typeAheadAssertions(Ljava/awt/Component;Ljava/awt/AWTEvent;)Z+239
+j  java.awt.DefaultKeyboardFocusManager.dispatchEvent(Ljava/awt/AWTEvent;)Z+1079
+J  java.awt.Component.dispatchEventImpl(Ljava/awt/AWTEvent;)V
+J  java.awt.EventQueue.dispatchEvent(Ljava/awt/AWTEvent;)V
+v  ~RuntimeStub::alignment_frame_return Runtime1 stub
+j  java.awt.SequencedEvent.dispatch()V+110
+J  java.awt.EventQueue.dispatchEvent(Ljava/awt/AWTEvent;)V
+J  java.awt.EventDispatchThread.pumpOneEventForHierarchy(ILjava/awt/Component;)Z
+v  ~RuntimeStub::alignment_frame_return Runtime1 stub
+j  java.awt.EventDispatchThread.pumpEventsForHierarchy(ILjava/awt/Conditional;Ljava/awt/Component;)V+26
+j  java.awt.EventDispatchThread.pumpEvents(ILjava/awt/Conditional;)V+4
+j  java.awt.EventDispatchThread.pumpEvents(Ljava/awt/Conditional;)V+3
+j  java.awt.EventDispatchThread.run()V+9
+v  ~StubRoutines::call_stub
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x0aef1ef8 JavaThread "Thread-5" [_thread_blocked, id=1008]
+=>0x0b0a1698 JavaThread "AWT-EventQueue-1" [_thread_in_native, id=2808]
+  0x003a5ff8 JavaThread "DestroyJavaVM" [_thread_blocked, id=2140]
+  0x0b08c058 JavaThread "AWT-EventQueue-0" [_thread_blocked, id=3916]
+  0x00ac1a70 JavaThread "AWT-Windows" daemon [_thread_in_native, id=1704]
+  0x00ac16c0 JavaThread "AWT-Shutdown" [_thread_blocked, id=3964]
+  0x00ac03e8 JavaThread "Java2D Disposer" daemon [_thread_blocked, id=3076]
+  0x00a710c8 JavaThread "Low Memory Detector" daemon [_thread_blocked, id=3632]
+  0x00a6fd60 JavaThread "CompilerThread0" daemon [_thread_blocked, id=2796]
+  0x00a6eec0 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=2212]
+  0x003aee18 JavaThread "Finalizer" daemon [_thread_blocked, id=3412]
+  0x00a43298 JavaThread "Reference Handler" daemon [_thread_blocked, id=1764]
+
+Other Threads:
+  0x00a408e0 VMThread [id=2548]
+  0x00a6ecd8 WatcherThread [id=2480]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap
+ def new generation   total 576K, used 225K [0x22ad0000, 0x22b70000, 0x22fb0000)
+  eden space 512K,  37% used [0x22ad0000, 0x22b004e0, 0x22b50000)
+  from space 64K,  51% used [0x22b50000, 0x22b582a8, 0x22b60000)
+  to   space 64K,   0% used [0x22b60000, 0x22b60000, 0x22b70000)
+ tenured generation   total 1408K, used 458K [0x22fb0000, 0x23110000, 0x26ad0000)
+   the space 1408K,  32% used [0x22fb0000, 0x23022850, 0x23022a00, 0x23110000)
+ compacting perm gen  total 8192K, used 453K [0x26ad0000, 0x272d0000, 0x2aad0000)
+   the space 8192K,   5% used [0x26ad0000, 0x26b41740, 0x26b41800, 0x272d0000)
+    ro space 8192K,  67% used [0x2aad0000, 0x2b02e380, 0x2b02e400, 0x2b2d0000)
+    rw space 12288K,  47% used [0x2b2d0000, 0x2b8786e8, 0x2b878800, 0x2bed0000)
+
+Dynamic libraries:
+0x00400000 - 0x0040d000 	C:\Archivos de programa\Java\jdk1.5.0_08\bin\javaw.exe
+0x7c910000 - 0x7c9c6000 	C:\WINDOWS\system32\ntdll.dll
+0x7c800000 - 0x7c901000 	C:\WINDOWS\system32\kernel32.dll
+0x77da0000 - 0x77e4c000 	C:\WINDOWS\system32\ADVAPI32.dll
+0x77e50000 - 0x77ee1000 	C:\WINDOWS\system32\RPCRT4.dll
+0x77d10000 - 0x77da0000 	C:\WINDOWS\system32\USER32.dll
+0x77ef0000 - 0x77f37000 	C:\WINDOWS\system32\GDI32.dll
+0x77be0000 - 0x77c38000 	C:\WINDOWS\system32\MSVCRT.dll
+0x6d730000 - 0x6d8cb000 	C:\Archivos de programa\Java\jdk1.5.0_08\jre\bin\client\jvm.dll
+0x76b00000 - 0x76b2e000 	C:\WINDOWS\system32\WINMM.dll
+0x5d160000 - 0x5d167000 	C:\WINDOWS\system32\serwvdrv.dll
+0x5b480000 - 0x5b487000 	C:\WINDOWS\system32\umdmxfrm.dll
+0x6d2f0000 - 0x6d2f8000 	C:\Archivos de programa\Java\jdk1.5.0_08\jre\bin\hpi.dll
+0x76bb0000 - 0x76bbb000 	C:\WINDOWS\system32\PSAPI.DLL
+0x6d700000 - 0x6d70c000 	C:\Archivos de programa\Java\jdk1.5.0_08\jre\bin\verify.dll
+0x6d370000 - 0x6d38d000 	C:\Archivos de programa\Java\jdk1.5.0_08\jre\bin\java.dll
+0x6d720000 - 0x6d72f000 	C:\Archivos de programa\Java\jdk1.5.0_08\jre\bin\zip.dll
+0x6d070000 - 0x6d1d9000 	C:\Archivos de programa\Java\jdk1.5.0_08\jre\bin\awt.dll
+0x72f80000 - 0x72fa6000 	C:\WINDOWS\system32\WINSPOOL.DRV
+0x76340000 - 0x7635d000 	C:\WINDOWS\system32\IMM32.dll
+0x774b0000 - 0x775ed000 	C:\WINDOWS\system32\ole32.dll
+0x5b150000 - 0x5b188000 	C:\WINDOWS\system32\uxtheme.dll
+0x736e0000 - 0x73729000 	C:\WINDOWS\system32\ddraw.dll
+0x73b40000 - 0x73b46000 	C:\WINDOWS\system32\DCIMAN32.dll
+0x6d2b0000 - 0x6d2ef000 	C:\Archivos de programa\Java\jdk1.5.0_08\jre\bin\fontmanager.dll
+0x746b0000 - 0x746fb000 	C:\WINDOWS\system32\MSCTF.dll
+0x10100000 - 0x10116000 	C:\Archivos de programa\Logitech\SetPoint\lgscroll.dll
+0x6d530000 - 0x6d543000 	C:\Archivos de programa\Java\jdk1.5.0_08\jre\bin\net.dll
+0x71a30000 - 0x71a47000 	C:\WINDOWS\system32\WS2_32.dll
+0x71a20000 - 0x71a28000 	C:\WINDOWS\system32\WS2HELP.dll
+0x6d550000 - 0x6d559000 	C:\Archivos de programa\Java\jdk1.5.0_08\jre\bin\nio.dll
+0x74dc0000 - 0x74e2c000 	C:\WINDOWS\system32\RICHED20.DLL
+0x60300000 - 0x60307000 	C:\ARCHIV~1\Yahoo!\MESSEN~1\idle.dll
+0x7c340000 - 0x7c396000 	C:\ARCHIV~1\Yahoo!\MESSEN~1\MSVCR71.dll
+
+VM Arguments:
+jvm_args: -Djava.security.policy=java.policy.applet
+java_command: sun.applet.AppletViewer keyStrokes.BotonesColoresApplet1160601963703.html
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+CLASSPATH=.;C:\Archivos de programa\Java\jre1.5.0_08\lib\ext\QTJava.zip
+PATH=C:\Archivos de programa\Java\jdk1.5.0_08\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\Archivos de programa\ATI Technologies\ATI Control Panel;C:\Archivos de programa\Archivos comunes\Ulead Systems\MPEG;C:\Archivos de programa\QuickTime\QTSystem\
+USERNAME=Luis
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=x86 Family 15 Model 2 Stepping 7, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows XP Build 2600 Service Pack 2
+
+CPU:total 1 (cores per cpu 1, threads per core 1) family 15 model 2 stepping 7, cmov, cx8, fxsr, mmx, sse, sse2
+
+Memory: 4k page, physical 785904k(108328k free), swap 1136228k(451884k free)
+
+vm_info: Java HotSpot(TM) Client VM (1.5.0_08-b03) for windows-x86, built on Jul 26 2006 01:10:50 by "java_re" with MS VC++ 6.0
+
